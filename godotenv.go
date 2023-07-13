@@ -19,7 +19,6 @@ import (
 	"io"
 	"os"
 	"os/exec"
-	"sort"
 	"strconv"
 	"strings"
 )
@@ -170,7 +169,7 @@ func Marshal(envMap map[string]string) (string, error) {
 			lines = append(lines, fmt.Sprintf(`%s="%s"`, k, doubleQuoteEscape(v)))
 		}
 	}
-	sort.Strings(lines)
+	//sort.Strings(lines)
 	return strings.Join(lines, "\n"), nil
 }
 
